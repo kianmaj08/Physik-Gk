@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physik Grundkurs - Kompendium für Q1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-atom"></i>
+                <span>Physik GK</span>
+            </div>
+            <div class="nav-search">
+                <input type="text" id="searchInput" placeholder="Thema suchen..." />
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="nav-menu">
+                <a href="#schwingungen">Schwingungen</a>
+                <a href="#wellen">Wellen</a>
+                <a href="#felder">Felder</a>
+                <a href="#induktion">Induktion</a>
+                <a href="#kondensator">Kondensator</a>
+                <a href="#quanten">Quantenphysik</a>
+                <a href="#strahlung">Strahlung</a>
+                <a href="#atomphysik">Atomphysik</a>
+                <a href="#kernphysik">Kernphysik</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Physik Grundkurs</h1>
+            <p class="hero-subtitle">Komplettes Kompendium für die Qualifikationsphase</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">9</span>
+                    <span class="stat-label">Themenfelder</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Formeln</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">Aufgaben</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Schwingungen und Wellen -->
+        <section id="schwingungen" class="topic-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-wave-square"></i>
+                    Periodische Vorgänge - Harmonische Schwingungen
+                </h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Grundlagen</h3>
+                        <p>Harmonische Schwingungen sind periodische Bewegungen um eine Ruhelage. Sie werden durch die Rückstellkraft charakterisiert, die proportional zur Auslenkung ist.</p>
+
+                        <h4>Wichtige Größen:</h4>
+                        <ul>
+                            <li><strong>Elongation s(t):</strong> Auslenkung zur Zeit t</li>
+                            <li><strong>Amplitude A:</strong> Maximale Auslenkung</li>
+                            <li><strong>Periodendauer T:</strong> Zeit für eine vollständige Schwingung</li>
+                            <li><strong>Frequenz f:</strong> Anzahl Schwingungen pro Sekunde</li>
+                        </ul>
+
+                        <div class="formula-box">
+                            <h4>Zentrale Formeln:</h4>
+                            <p>\(s(t) = A \cdot \sin(\omega t + \phi)\)</p>
+                            <p>\(\omega = 2\pi f = \frac{2\pi}{T}\)</p>
+                            <p>\(f = \frac{1}{T}\)</p>
+                        </div>
+
+                        <h4>Federpendel</h4>
+                        <p>Beim Federpendel ist die Rückstellkraft proportional zur Auslenkung: \(F = -Ds\)</p>
+                        <div class="formula-box">
+                            <p>\(T = 2\pi\sqrt{\frac{m}{D}}\)</p>
+                            <p>\(f = \frac{1}{2\pi}\sqrt{\frac{D}{m}}\)</p>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Energieumwandlungen</h3>
+                        <p>Bei harmonischen Schwingungen findet ein ständiger Austausch zwischen kinetischer und potentieller Energie statt.</p>
+
+                        <div class="formula-box">
+                            <h4>Energieformeln:</h4>
+                            <p>\(E_{kin} = \frac{1}{2}mv^2\)</p>
+                            <p>\(E_{pot} = \frac{1}{2}Ds^2\)</p>
+                            <p>\(E_{ges} = E_{kin} + E_{pot} = \frac{1}{2}DA^2\)</p>
+                        </div>
+
+                        <div class="exercise-box">
+                            <h4>Übungsaufgabe 1:</h4>
+                            <p>Ein Federpendel mit m = 0,2 kg und D = 50 N/m schwingt mit A = 0,1 m. Berechne:</p>
+                            <p>a) Die Periodendauer T<br>
+                            b) Die Gesamtenergie<br>
+                            c) Die maximale Geschwindigkeit</p>
+
+                            <details class="solution">
+                                <summary>Lösung anzeigen</summary>
+                                <p>a) \(T = 2\pi\sqrt{\frac{0,2}{50}} = 0,398\) s</p>
+                                <p>b) \(E_{ges} = \frac{1}{2} \cdot 50 \cdot 0,1^2 = 0,25\) J</p>
+                                <p>c) \(v_{max} = A\omega = 0,1 \cdot \sqrt{\frac{50}{0,2}} = 1,58\) m/s</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wellen und Huygens -->
+        <section id="wellen" class="topic-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-water"></i>
+                    Beugung und Interferenz - Das Huygens'sche Prinzip
+                </h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Mechanische Wellen</h3>
+                        <p>Wellen sind Störungen, die sich im Raum ausbreiten und dabei Energie transportieren, ohne Materie zu transportieren.</p>
+
+                        <h4>Wellengleichung:</h4>
+                        <div class="formula-box">
+                            <p>\(y(x,t) = A \sin(kx - \omega t + \phi)\)</p>
+                            <p>\(c = f \lambda = \frac{\omega}{k}\)</p>
+                            <p>\(k = \frac{2\pi}{\lambda}\) (Wellenzahl)</p>
+                        </div>
+
+                        <h4>Huygens'sches Prinzip</h4>
+                        <p>Jeder Punkt einer Wellenfront kann als Ausgangspunkt einer Elementarwelle betrachtet werden. Die Einhüllende aller Elementarwellen ergibt die neue Wellenfront.</p>
+
+                        <h4>Anwendungen:</h4>
+                        <ul>
+                            <li><strong>Reflexion:</strong> Einfallswinkel = Ausfallswinkel</li>
+                            <li><strong>Brechung:</strong> \(\frac{\sin\alpha}{\sin\beta} = \frac{c_1}{c_2}\)</li>
+                            <li><strong>Beugung:</strong> Wellen können um Hindernisse "herumgehen"</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Interferenz und Polarisation</h3>
+                        <p>Bei der Überlagerung von Wellen entstehen Interferenzmuster durch konstruktive und destruktive Interferenz.</p>
+
+                        <h4>Doppelspalt-Interferenz</h4>
+                        <div class="formula-box">
+                            <p><strong>Maxima:</strong> \(d \sin\alpha = k\lambda\) (k = 0,1,2,...)</p>
+                            <p><strong>Minima:</strong> \(d \sin\alpha = (k+\frac{1}{2})\lambda\)</p>
+                        </div>
+
+                        <h4>Gitter</h4>
+                        <div class="formula-box">
+                            <p>\(g \sin\alpha = k\lambda\)</p>
+                            <p>g: Gitterkonstante</p>
+                        </div>
+
+                        <h4>Polarisation</h4>
+                        <p>Longitudinalwellen können nicht polarisiert werden, Transversalwellen schon. Dies ist ein wichtiges Unterscheidungsmerkmal.</p>
+
+                        <div class="exercise-box">
+                            <h4>Übungsaufgabe 2:</h4>
+                            <p>Bei einem Doppelspaltexperiment mit d = 0,5 mm ist der Abstand der Maxima auf dem Schirm 2,4 mm. Der Schirmabstand beträgt 2 m. Bestimme die Wellenlänge des Lichts.</p>
+
+                            <details class="solution">
+                                <summary>Lösung anzeigen</summary>
+                                <p>\(\lambda = \frac{d \cdot \Delta s}{L} = \frac{0,5 \times 10^{-3} \cdot 2,4 \times 10^{-3}}{2} = 600\) nm</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Elektrische und magnetische Felder -->
+        <section id="felder" class="topic-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-magnet"></i>
+                    Erforschung des Elektrons - Felder
+                </h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Elektrische Felder</h3>
+                        <p>Elektrische Felder entstehen um geladene Teilchen und üben Kräfte auf andere geladene Teilchen aus.</p>
+
+                        <div class="formula-box">
+                            <h4>Grundformeln:</h4>
+                            <p>\(\vec{E} = \frac{\vec{F}}{Q}\) (Definition der Feldstärke)</p>
+                            <p>\(E = \frac{U}{d}\) (homogenes Feld)</p>
+                            <p>\(E = \frac{1}{4\pi\varepsilon_0} \frac{Q}{r^2}\) (Punktladung)</p>
+                        </div>
+
+                        <h4>Plattenkondensator</h4>
+                        <p>Zwischen zwei parallelen Platten entsteht ein homogenes elektrisches Feld.</p>
+
+                        <div class="formula-box">
+                            <p>\(U = Ed\)</p>
+                            <p>\(F = QE\)</p>
+                            <p>\(W = QU = Fd\)</p>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Magnetische Felder</h3>
+                        <p>Magnetische Felder entstehen um bewegte Ladungen und Permanentmagnete.</p>
+
+                        <div class="formula-box">
+                            <h4>Magnetische Flussdichte:</h4>
+                            <p>\(\vec{B} = \frac{\vec{F}}{I \cdot l}\)</p>
+                        </div>
+
+                        <h4>Lorentzkraft</h4>
+                        <p>Auf bewegte Ladungen im Magnetfeld wirkt die Lorentzkraft:</p>
+                        <div class="formula-box">
+                            <p>\(\vec{F_L} = Q(\vec{v} \times \vec{B})\)</p>
+                            <p>\(F_L = QvB\sin\alpha\)</p>
+                        </div>
+
+                        <h4>Kreisbahn im Magnetfeld</h4>
+                        <p>Geladene Teilchen bewegen sich im homogenen Magnetfeld auf Kreisbahnen:</p>
+                        <div class="formula-box">
+                            <p>\(r = \frac{mv}{QB}\)</p>
+                            <p>\(T = \frac{2\pi m}{QB}\)</p>
+                        </div>
+
+                        <div class="exercise-box">
+                            <h4>Übungsaufgabe 3:</h4>
+                            <p>Ein Elektron (m = 9,11×10⁻³¹ kg, e = 1,6×10⁻¹⁹ C) wird mit v = 10⁶ m/s senkrecht in ein Magnetfeld B = 0,01 T geschossen. Bestimme den Bahnradius.</p>
+
+                            <details class="solution">
+                                <summary>Lösung anzeigen</summary>
+                                <p>\(r = \frac{mv}{eB} = \frac{9,11 \times 10^{-31} \times 10^6}{1,6 \times 10^{-19} \times 0,01} = 5,69 \times 10^{-5}\) m = 56,9 μm</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Induktion -->
+        <section id="induktion" class="topic-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-bolt"></i>
+                    Elektromagnetische Induktion
+                </h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Induktionsgesetz</h3>
+                        <p>Ändert sich der magnetische Fluss durch eine Spule, wird eine Spannung induziert.</p>
+
+                        <div class="formula-box">
+                            <h4>Faraday'sches Induktionsgesetz:</h4>
+                            <p>\(U_{ind} = -\frac{d\Phi}{dt}\)</p>
+                            <p>\(\Phi = B \cdot A \cdot \cos\alpha\) (magnetischer Fluss)</p>
+                        </div>
+
+                        <h4>Lenz'sche Regel</h4>
+                        <p>Die induzierte Spannung ist so gerichtet, dass der induzierte Strom seiner Ursache entgegenwirkt.</p>
+
+                        <h4>Bewegungsinduktion</h4>
+                        <p>Bei der Leiterschaukel wird durch Bewegung im Magnetfeld eine Spannung induziert:</p>
+                        <div class="formula-box">
+                            <p>\(U_{ind} = Blv\)</p>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Generator und Transformator</h3>
+
+                        <h4>Generator</h4>
+                        <p>Im Generator wird mechanische Energie in elektrische Energie umgewandelt:</p>
+                        <div class="formula-box">
+                            <p>\(U(t) = U_0 \sin(\omega t)\)</p>
+                            <p>\(U_0 = nBA\omega\)</p>
+                        </div>
+
+                        <h4>Transformator</h4>
+                        <p>Der Transformator überträgt elektrische Energie von einer Spule auf eine andere:</p>
+                        <div class="formula-box">
+                            <p>\(\frac{U_1}{U_2} = \frac{n_1}{n_2}\)</p>
+                            <p>\(\frac{I_1}{I_2} = \frac{n_2}{n_1}\)</p>
+                            <p>\(P_1 = P_2\) (verlustfrei)</p>
+                        </div>
+
+                        <div class="exercise-box">
+                            <h4>Übungsaufgabe 4:</h4>
+                            <p>Ein Transformator hat eine Primärspule mit 500 Windungen und eine Sekundärspule mit 100 Windungen. An die Primärseite wird eine Spannung von 230 V angelegt. Berechne die Sekundärspannung.</p>
+
+                            <details class="solution">
+                                <summary>Lösung anzeigen</summary>
+                                <p>\(U_2 = U_1 \cdot \frac{n_2}{n_1} = 230 \times \frac{100}{500} = 46\) V</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kondensator -->
+        <section id="kondensator" class="topic-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-battery-half"></i>
+                    Kondensator und elektromagnetische Schwingungen
+                </h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Kondensator-Grundlagen</h3>
+                        <p>Kondensatoren speichern elektrische Energie durch Ladungstrennung.</p>
+
+                        <div class="formula-box">
+                            <h4>Kapazität:</h4>
+                            <p>\(C = \frac{Q}{U}\)</p>
+                            <p>\(C = \varepsilon_0 \varepsilon_r \frac{A}{d}\) (Plattenkondensator)</p>
+                        </div>
+
+                        <h4>Energie im Kondensator</h4>
+                        <div class="formula-box">
+                            <p>\(W = \frac{1}{2}CU^2 = \frac{1}{2}QU = \frac{Q^2}{2C}\)</p>
+                        </div>
+
+                        <h4>Auf- und Entladung</h4>
+                        <p>Der zeitliche Verlauf beim Laden/Entladen folgt einer Exponentialfunktion:</p>
+                        <div class="formula-box">
+                            <p>\(Q(t) = Q_0(1-e^{-\frac{t}{RC}})\) (Aufladung)</p>
+                            <p>\(Q(t) = Q_0 e^{-\frac{t}{RC}}\) (Entladung)</p>
+                            <p>\(\tau = RC\) (Zeitkonstante)</p>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Elektromagnetische Schwingungen</h3>
+                        <p>Im LC-Schwingkreis tauschen sich elektrische und magnetische Feldenergie periodisch aus.</p>
+
+                        <div class="formula-box">
+                            <h4>Thomson-Schwingung:</h4>
+                            <p>\(T = 2\pi\sqrt{LC}\)</p>
+                            <p>\(f = \frac{1}{2\pi\sqrt{LC}}\)</p>
+                        </div>
+
+                        <h4>Energieaustausch</h4>
+                        <ul>
+                            <li><strong>Kondensator:</strong> \(W_C = \frac{1}{2}CU^2\)</li>
+                            <li><strong>Spule:</strong> \(W_L = \frac{1}{2}LI^2\)</li>
+                            <li><strong>Gesamt:</strong> \(W = W_C + W_L = const\)</li>
+                        </ul>
+
+                        <div class="exercise-box">
+                            <h4>Übungsaufgabe 5:</h4>
+                            <p>Ein Kondensator mit C = 100 μF wird auf U = 12 V aufgeladen. Berechne:</p>
+                            <p>a) Die gespeicherte Ladung<br>
+                            b) Die gespeicherte Energie</p>
+
+                            <details class="solution">
+                                <summary>Lösung anzeigen</summary>
+                                <p>a) \(Q = CU = 100 \times 10^{-6} \times 12 = 1,2\) mC</p>
+                                <p>b) \(W = \frac{1}{2}CU^2 = \frac{1}{2} \times 100 \times 10^{-6} \times 12^2 = 7,2\) mJ</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quantenphysik -->
+        <section id="quanten" class="topic-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-atom"></i>
+                    Quantenobjekte - Photonen und Elektronen
+                </h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Photoeffekt</h3>
+                        <p>Beim Photoeffekt werden Elektronen durch Lichtquanten aus Metallen herausgelöst.</p>
+
+                        <div class="formula-box">
+                            <h4>Einstein'sche Photogleichung:</h4>
+                            <p>\(E_{Photon} = W_A + E_{kin}\)</p>
+                            <p>\(hf = W_A + \frac{1}{2}mv_{max}^2\)</p>
+                        </div>
+
+                        <h4>Photon-Eigenschaften</h4>
+                        <div class="formula-box">
+                            <p>\(E_{Photon} = hf = \frac{hc}{\lambda}\)</p>
+                            <p>\(p_{Photon} = \frac{h}{\lambda}\)</p>
+                        </div>
+
+                        <h4>Planck'sches Wirkungsquantum</h4>
+                        <p>\(h = 6,626 \times 10^{-34}\) Js</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>De-Broglie-Wellen</h3>
+                        <p>Alle Materieteilchen besitzen Welleneigenschaften.</p>
+
+                        <div class="formula-box">
+                            <h4>De-Broglie-Wellenlänge:</h4>
+                            <p>\(\lambda = \frac{h}{p} = \frac{h}{mv}\)</p>
+                        </div>
+
+                        <h4>Doppelspalt mit Elektronen</h4>
+                        <p>Elektronen zeigen am Doppelspalt Interferenzmuster, was ihre Wellennatur beweist.</p>
+
+                        <h4>Welle-Teilchen-Dualismus</h4>
+                        <ul>
+                            <li><strong>Teilchencharakter:</strong> Lokalisierbar, zählbar</li>
+                            <li><strong>Wellencharakter:</strong> Interferenz, Beugung</li>
+                            <li><strong>Kopenhagener Deutung:</strong> Wahrscheinlichkeitsinterpretation</li>
+                        </ul>
+
+                        <div class="exercise-box">
+                            <h4>Übungsaufgabe 6:</h4>
+                            <p>Berechne die De-Broglie-Wellenlänge eines Elektrons mit der Geschwindigkeit v = 10⁶ m/s.</p>
+
+                            <details class="solution">
+                                <summary>Lösung anzeigen</summary>
+                                <p>\(\lambda = \frac{h}{mv} = \frac{6,626 \times 10^{-34}}{9,11 \times 10^{-31} \times 10^6} = 7,27 \times 10^{-10}\) m = 0,727 nm</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strahlung -->
+        <section id="strahlung" class="topic-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-radiation"></i>
+                    Ionisierende Strahlung
+                </h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Strahlungsarten</h3>
+                        <p>Ionisierende Strahlung kann Elektronen aus Atomen herauslösen.</p>
+
+                        <h4>α-Strahlung (Alpha)</h4>
+                        <ul>
+                            <li>Heliumkerne (2 Protonen, 2 Neutronen)</li>
+                            <li>Geringe Reichweite (wenige cm in Luft)</li>
+                            <li>Stopp: Papier, Haut</li>
+                        </ul>
+
+                        <h4>β-Strahlung (Beta)</h4>
+                        <ul>
+                            <li>Elektronen oder Positronen</li>
+                            <li>Mittlere Reichweite (mehrere Meter in Luft)</li>
+                            <li>Stopp: Aluminium (wenige mm)</li>
+                        </ul>
+
+                        <h4>γ-Strahlung (Gamma)</h4>
+                        <ul>
+                            <li>Elektromagnetische Strahlung</li>
+                            <li>Sehr große Reichweite</li>
+                            <li>Stopp: Blei, dicker Beton</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Röntgenstrahlung</h3>
+                        <p>Röntgenstrahlung entsteht beim Abbremsen von Elektronen in Materie.</p>
+
+                        <h4>Bremsstrahlung</h4>
+                        <p>Kontinuierliches Spektrum durch Abbremsung der Elektronen:</p>
+                        <div class="formula-box">
+                            <p>\(\lambda_{min} = \frac{hc}{eU}\)</p>
+                        </div>
+
+                        <h4>Charakteristische Röntgenstrahlung</h4>
+                        <p>Diskrete Linien durch Übergänge zwischen Elektronenschalen.</p>
+
+                        <h4>Biologische Wirkung</h4>
+                        <div class="formula-box">
+                            <p><strong>Äquivalentdosis:</strong> \(H = D \cdot w_R\)</p>
+                            <p>D: Energiedosis (Gy)</p>
+                            <p>\(w_R\): Strahlungswichtungsfaktor</p>
+                            <p>H: Äquivalentdosis (Sv)</p>
+                        </div>
+
+                        <div class="exercise-box">
+                            <h4>Übungsaufgabe 7:</h4>
+                            <p>Eine Röntgenröhre wird mit U = 50 kV betrieben. Berechne die minimale Wellenlänge der erzeugten Röntgenstrahlung.</p>
+
+                            <details class="solution">
+                                <summary>Lösung anzeigen</summary>
+                                <p>\(\lambda_{min} = \frac{hc}{eU} = \frac{6,626 \times 10^{-34} \times 3 \times 10^8}{1,6 \times 10^{-19} \times 50 \times 10^3} = 2,48 \times 10^{-11}\) m = 24,8 pm</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Atomphysik -->
+        <section id="atomphysik" class="topic-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-atom"></i>
+                    Atomphysik und Spektralanalyse
+                </h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Atomaufbau</h3>
+                        <p>Atome bestehen aus einem Kern mit Protonen und Neutronen, umgeben von Elektronen in diskreten Energiezuständen.</p>
+
+                        <h4>Bohr'sches Atommodell</h4>
+                        <p>Elektronen bewegen sich auf festen Bahnen um den Kern:</p>
+                        <div class="formula-box">
+                            <p>\(E_n = -13,6 \text{ eV} \cdot \frac{1}{n^2}\) (Wasserstoff)</p>
+                            <p>\(r_n = 0,529 \text{ nm} \cdot n^2\) (Bahnradien)</p>
+                        </div>
+
+                        <h4>Quantensprünge</h4>
+                        <p>Beim Übergang zwischen Energieniveaus wird ein Photon emittiert oder absorbiert:</p>
+                        <div class="formula-box">
+                            <p>\(\Delta E = E_m - E_n = hf\)</p>
+                            <p>\(\frac{1}{\lambda} = R \left(\frac{1}{n^2} - \frac{1}{m^2}\right)\)</p>
+                            <p>R = 1,097×10⁷ m⁻¹ (Rydberg-Konstante)</p>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Spektralanalyse</h3>
+                        <p>Durch Analyse der Lichtemission und -absorption können Elemente identifiziert werden.</p>
+
+                        <h4>Emissionsspektren</h4>
+                        <ul>
+                            <li>Kontinuierliches Spektrum: Glühende Festkörper</li>
+                            <li>Linienspektrum: Angeregte Gase</li>
+                            <li>Jedes Element hat charakteristische Linien</li>
+                        </ul>
+
+                        <h4>Absorptionsspektren</h4>
+                        <p>Fraunhofer-Linien im Sonnenspektrum zeigen die Zusammensetzung der Sonnenatmosphäre.</p>
+
+                        <h4>Franck-Hertz-Versuch</h4>
+                        <p>Experimenteller Nachweis der diskreten Energieniveaus in Atomen durch Elektronenstoß-Anregung.</p>
+
+                        <div class="exercise-box">
+                            <h4>Übungsaufgabe 8:</h4>
+                            <p>Berechne die Wellenlänge des Lichts beim Übergang vom n=3 zum n=2 Niveau im Wasserstoffatom.</p>
+
+                            <details class="solution">
+                                <summary>Lösung anzeigen</summary>
+                                <p>\(\Delta E = 13,6 \left(\frac{1}{4} - \frac{1}{9}\right) = 1,89\) eV</p>
+                                <p>\(\lambda = \frac{hc}{\Delta E} = \frac{1,24 \times 10^{-6}}{1,89} = 656\) nm (rot)</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kernphysik -->
+        <section id="kernphysik" class="topic-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-atom"></i>
+                    Kernphysik und Radioaktivität
+                </h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Atomkern</h3>
+                        <p>Der Atomkern besteht aus Protonen und Neutronen (Nukleonen), die durch die starke Kernkraft zusammengehalten werden.</p>
+
+                        <h4>Nuklidschreibweise</h4>
+                        <p>\(^A_Z X\) mit A = Massenzahl, Z = Ordnungszahl</p>
+
+                        <h4>Radioaktiver Zerfall</h4>
+                        <div class="formula-box">
+                            <p>\(N(t) = N_0 e^{-\lambda t}\)</p>
+                            <p>\(T_{1/2} = \frac{\ln 2}{\lambda}\)</p>
+                        </div>
+
+                        <h4>Zerfallsarten</h4>
+                        <ul>
+                            <li><strong>α-Zerfall:</strong> \(^A_Z X \rightarrow ^{A-4}_{Z-2}Y + ^4_2\alpha\)</li>
+                            <li><strong>β⁻-Zerfall:</strong> \(^A_Z X \rightarrow ^A_{Z+1}Y + e^- + \bar{\nu}_e\)</li>
+                            <li><strong>β⁺-Zerfall:</strong> \(^A_Z X \rightarrow ^A_{Z-1}Y + e^+ + \nu_e\)</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Massendefekt und Kernenergie</h3>
+                        <p>Die Masse des Kerns ist kleiner als die Summe der Einzelmassen der Nukleonen.</p>
+
+                        <div class="formula-box">
+                            <h4>Einstein-Beziehung:</h4>
+                            <p>\(E = mc^2\)</p>
+                            <p>\(\Delta E = \Delta m c^2\)</p>
+                        </div>
+
+                        <h4>Bindungsenergie</h4>
+                        <div class="formula-box">
+                            <p>\(E_B = (Zm_p + Nm_n - M)c^2\)</p>
+                        </div>
+
+                        <h4>Kernspaltung und -fusion</h4>
+                        <ul>
+                            <li><strong>Spaltung:</strong> Schwere Kerne → leichtere Kerne + Energie</li>
+                            <li><strong>Fusion:</strong> Leichte Kerne → schwerere Kerne + Energie</li>
+                        </ul>
+
+                        <div class="exercise-box">
+                            <h4>Übungsaufgabe 9:</h4>
+                            <p>Radium-226 hat eine Halbwertszeit von 1602 Jahren. Nach welcher Zeit ist noch 1/8 der ursprünglichen Menge vorhanden?</p>
+
+                            <details class="solution">
+                                <summary>Lösung anzeigen</summary>
+                                <p>1/8 = (1/2)³, also nach 3 Halbwertszeiten:</p>
+                                <p>t = 3 × 1602 Jahre = 4806 Jahre</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2024 Physik Grundkurs Kompendium</p>
+                    <p class="author">Erstellt von Kian Majidian Q1</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#schwingungen">Nach oben</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
